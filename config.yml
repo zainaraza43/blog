@@ -70,3 +70,9 @@ params:
       url: "https://www.linkedin.com/in/jeremie-bornais/"
     - name: website
       url: "https://jeremie.bornais.ca"
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
