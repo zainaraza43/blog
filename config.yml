@@ -22,12 +22,12 @@ params:
   disableThemeToggle: false
 
   ShowReadingTime: true
-  ShowShareButtons: true
+  # ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   # ShowCodeCopyButtons: false
   ShowCodeCopyButtons: true
-  ShowWordCount: true
+  # ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
   disableSpecial1stPost: false
@@ -48,7 +48,7 @@ params:
     enabled: false # needs to be explicitly set
     title: ExampleSite
     subtitle: "This is subtitle"
-    imageUrl: "<img location>"
+    # imageUrl: "<img location>"
     imageWidth: 120
     imageHeight: 120
     imageTitle: my image
@@ -61,7 +61,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Content: Welcome to my blog! Here, I'll write about things I find interesting, or give tutorials that hopefully someone will find useful :)
 
   socialIcons:
     - name: github
