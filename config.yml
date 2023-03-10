@@ -1,4 +1,68 @@
-baseURL: http://example.org/
+baseURL: http://jere-mie.github.io/new-blog/
 languageCode: en-us
-title: My New Hugo Site
+title: Jeremie's Blog
 theme: "PaperMod"
+paginate: 5
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Jeremie's Blog
+  description: Welcome to my blog! Here, I'll write about things I find interesting, or give tutorials that hopefully someone will find useful :)
+  keywords: [Blog, Computer Science]
+  author: Me
+  # author: ["Me", "You"] # multiple authors
+  # images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: dark # dark, light, auto
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  # ShowCodeCopyButtons: false
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  label:
+    text: "Home"
+    # icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: ExampleSite
+    subtitle: "This is subtitle"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: Welcome to my blog
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/jere-mie/"
