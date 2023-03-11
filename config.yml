@@ -14,7 +14,7 @@ params:
   title: Jeremie's Blog
   description: Welcome to my blog! Here, I'll write about things I find interesting, or give tutorials that hopefully someone will find useful :)
   keywords: [Blog, Computer Science]
-  author: Me
+  author: Jeremie Bornais
   # author: ["Me", "You"] # multiple authors
   # images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
