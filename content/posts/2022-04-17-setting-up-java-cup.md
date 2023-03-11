@@ -8,7 +8,7 @@ Just want all the commands? Check them out [here](#all-commands-in-one-block)
 Or, run this one command to do everything:
 
 ```bash
-curl -o- https://blog.bornais.ca/assets/scripts/javacup-install.sh | bash
+curl -o- https://blog.bornais.ca/scripts/javacup-install.sh | bash
 ```
 
 ## Prerequesite Software
@@ -29,7 +29,7 @@ cd 2140-javacup
 ```bash
 mkdir -p JLex
 cd JLex
-curl https://blog.bornais.ca/assets/2140/lex/Main.java -o Main.java
+curl https://blog.bornais.ca/2140/lex/Main.java -o Main.java
 javac Main.java
 cd ..
 ```
@@ -37,7 +37,7 @@ cd ..
 ### Install JavaCup
 
 ```bash
-curl https://blog.bornais.ca/assets/2140/cup/javaCup.tar -o javaCup.tar
+curl https://blog.bornais.ca/2140/cup/javaCup.tar -o javaCup.tar
 tar -xvf *.tar
 rm *.tar
 ```
@@ -45,10 +45,10 @@ rm *.tar
 ### Download all of the calc files
 
 ```bash
-curl https://blog.bornais.ca/assets/2140/cup/calc.lex -o calc.lex
-curl https://blog.bornais.ca/assets/2140/cup/calc.cup -o calc.cup
-curl https://blog.bornais.ca/assets/2140/cup/CalcParserUser.java -o CalcParserUser.java
-curl https://blog.bornais.ca/assets/2140/cup/calc.input -o calc.input
+curl https://blog.bornais.ca/2140/cup/calc.lex -o calc.lex
+curl https://blog.bornais.ca/2140/cup/calc.cup -o calc.cup
+curl https://blog.bornais.ca/2140/cup/CalcParserUser.java -o CalcParserUser.java
+curl https://blog.bornais.ca/2140/cup/calc.input -o calc.input
 ```
 
 ### Run it
@@ -73,7 +73,7 @@ Also, you may want to save the commands in [the "run it" section](#run-it) to a 
 I've uploaded one for your convenience. You can download it by running:
 
 ```bash
-curl https://blog.bornais.ca/assets/scripts/calc.sh -o calc.sh
+curl https://blog.bornais.ca/scripts/calc.sh -o calc.sh
 ```
 
 And you can run it by running:
@@ -88,7 +88,7 @@ chmod +x calc.sh # you only need to do this once
 Below are all of the commands listed together. You can type them in one at a time, or run this one script:
 
 ```bash
-curl -o- https://blog.bornais.ca/assets/scripts/javacup-install.sh | bash
+curl -o- https://blog.bornais.ca/scripts/javacup-install.sh | bash
 ```
 
 Commands one at a time:
@@ -100,18 +100,18 @@ cd 2140-javacup
 mkdir -p JLex
 cd JLex
 
-curl https://blog.bornais.ca/assets/2140/lex/Main.java -o Main.java
+curl https://blog.bornais.ca/2140/lex/Main.java -o Main.java
 javac Main.java
 cd ..
 
-curl https://blog.bornais.ca/assets/2140/cup/javaCup.tar -o javaCup.tar
+curl https://blog.bornais.ca/2140/cup/javaCup.tar -o javaCup.tar
 tar -xvf *.tar
 rm *.tar
 
-curl https://blog.bornais.ca/assets/2140/cup/calc.lex -o calc.lex
-curl https://blog.bornais.ca/assets/2140/cup/calc.cup -o calc.cup
-curl https://blog.bornais.ca/assets/2140/cup/CalcParserUser.java -o CalcParserUser.java
-curl https://blog.bornais.ca/assets/2140/cup/calc.input -o calc.input
+curl https://blog.bornais.ca/2140/cup/calc.lex -o calc.lex
+curl https://blog.bornais.ca/2140/cup/calc.cup -o calc.cup
+curl https://blog.bornais.ca/2140/cup/CalcParserUser.java -o CalcParserUser.java
+curl https://blog.bornais.ca/2140/cup/calc.input -o calc.input
 
 java JLex.Main calc.lex
 java java_cup.Main -parser CalcParser -symbols CalcSymbol calc.cup
