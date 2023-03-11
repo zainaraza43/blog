@@ -1,4 +1,4 @@
-baseURL: http://jere-mie.github.io/new-blog/
+baseURL: http://jere-mie.github.io/blog-new/
 languageCode: en-us
 title: Jeremie's Blog
 theme: "PaperMod"
@@ -39,19 +39,19 @@ params:
   tocopen: false
 
   label:
-    text: "Home"
+    text: "Jeremie's Blog"
     # icon: /apple-touch-icon.png
     iconHeight: 35
 
   # profile-mode
   profileMode:
     enabled: false # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
+    title: Jeremie's Blog
+    subtitle: "Come learn with me :)"
     # imageUrl: "<img location>"
-    imageWidth: 120
-    imageHeight: 120
-    imageTitle: my image
+    # imageWidth: 120
+    # imageHeight: 120
+    # imageTitle: my image
     buttons:
       - name: Posts
         url: posts
@@ -76,3 +76,12 @@ outputs:
         - HTML
         - RSS
         - JSON # is necessary
+
+menu:
+  main:
+  - name: "About"
+    url: "/about/"
+  - name: "Posts"
+    url: "/posts/"
+  - name: "Search"
+    url: "/search/"
