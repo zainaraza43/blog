@@ -192,3 +192,97 @@ In summary, constructors are important member functions of a class that are used
 Classes, structs, and objects are fundamental concepts in C++ and are essential for writing efficient, modular, and reusable code. By encapsulating data and behavior into a single entity, we can create objects that have well-defined attributes and methods. Access modifiers allow us to control the visibility and accessibility of our classes' member variables and functions, while inheritance allows us to create new classes based on existing ones. With these tools at our disposal, we can write powerful and flexible C++ programs.
 
 I hope this article has provided a useful introduction to classes, structs, and objects in C++. Feel free to experiment with the code examples and explore other features of object-oriented programming in C++. Happy coding!
+
+## Appendix - Try it Yourself!
+
+Here is a code block which contains an overview of all the concepts we've gone over in this article. You can copy and paste this code into your favorite C++ compiler or online IDE, and run it to see the output.
+
+The code defines a class called "Rectangle" with private member variables for width and height, and public member functions for setting and getting the width and height, calculating the area, and printing the rectangle's properties. It also defines a struct called "Point" with public member variables for x and y coordinates.
+
+In the main function, we create two Rectangle objects using different constructors, and manipulate their properties using member functions. We also create a Point object and print its properties.
+
+Now, let's take a look at the code:
+
+```cxx
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+  private:
+    int width;
+    int height;
+  public:
+    Rectangle() {
+      width = 0;
+      height = 0;
+    }
+    Rectangle(int w, int h) {
+      width = w;
+      height = h;
+    }
+    void setWidth(int w) {
+      width = w;
+    }
+    void setHeight(int h) {
+      height = h;
+    }
+    int getWidth() {
+      return width;
+    }
+    int getHeight() {
+      return height;
+    }
+    int area() {
+      return width * height;
+    }
+    void print() {
+      cout << "Width: " << width << endl;
+      cout << "Height: " << height << endl;
+      cout << "Area: " << area() << endl;
+    }
+};
+
+struct Point {
+  int x;
+  int y;
+};
+
+int main() {
+  Rectangle r1;
+  Rectangle r2(3, 4);
+
+  r1.print();
+  r2.print();
+
+  r1.setWidth(5);
+  r1.setHeight(6);
+
+  cout << "Width of r1: " << r1.getWidth() << endl;
+  cout << "Height of r1: " << r1.getHeight() << endl;
+  cout << "Area of r1: " << r1.area() << endl;
+
+  Point p = {2, 3};
+  cout << "Point p: (" << p.x << ", " << p.y << ")" << endl;
+
+  return 0;
+}
+```
+
+When you run this code, you should see output that looks like this:
+
+```cxx
+Width: 0
+Height: 0
+Area: 0
+Width: 3
+Height: 4
+Area: 12
+Width of r1: 5
+Height of r1: 6
+Area of r1: 30
+Point p: (2, 3)
+```
+
+This output shows that we have successfully created two Rectangle objects, r1 and r2, using different constructors, and set and printed their properties using member functions. We have also created a Point object p and printed its properties.
+
+You can experiment with this code by modifying the values passed to the constructors and member functions, adding new member functions, or creating additional objects and structs.
