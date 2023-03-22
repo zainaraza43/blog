@@ -23,9 +23,18 @@ class Rectangle {
     int width;
     int height;
   public:
-    void set_values(int, int);
-    int area();
-    int perimeter();
+    void set_values(int width, int height){
+      this->width = width;
+      this->height = height;
+    }
+
+    int area(){
+      return width*height;
+    }
+    
+    int perimeter(){
+      return width+width+height+height;
+    }
 };
 ```
 
