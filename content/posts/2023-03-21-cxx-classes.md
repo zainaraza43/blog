@@ -1,11 +1,9 @@
 ---
 title: Introduction to Classes, Structs, and Objects in C++
-date: 2023-03-02
+date: 2023-03-21
 draft: false
 author: Jeremie Bornais (With Help From ChatGPT 😎)
 ---
-
-## Introduction
 
 If you're familiar with programming in C++, you've likely heard of classes, structs, and objects. These concepts are at the core of object-oriented programming and are essential for creating efficient, reusable, and modular code.
 
