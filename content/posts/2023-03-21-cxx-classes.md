@@ -200,7 +200,9 @@ Classes, structs, and objects are fundamental concepts in C++ and are essential 
 
 I hope this article has provided a useful introduction to classes, structs, and objects in C++. Feel free to experiment with the code examples and explore other features of object-oriented programming in C++. Happy coding!
 
-## Appendix - Try it Yourself!
+## Appendix 
+
+### Try it Yourself
 
 Here is a code block which contains an overview of all the concepts we've gone over in this article. You can copy and paste this code into your favorite C++ compiler or online IDE, and run it to see the output.
 
@@ -293,3 +295,84 @@ Point p: (2, 3)
 This output shows that we have successfully created two Rectangle objects, r1 and r2, using different constructors, and set and printed their properties using member functions. We have also created a Point object p and printed its properties.
 
 You can experiment with this code by modifying the values passed to the constructors and member functions, adding new member functions, or creating additional objects and structs.
+
+### Exercise - Zoo Management System
+
+Your task is to create a Zoo management system using C++ classes and objects. The system should allow the user to create a new zoo and add animals to it. Each animal should have a name, species, age, and type of food they eat. The system should also allow the user to view a list of all the animals in the zoo and their details.
+
+Here's some starter code to get you going:
+
+```cxx
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+class Animal
+{
+public:
+    string name;
+    string species;
+    int age;
+    string foodType;
+
+    Animal(string name, string species, int age, string foodType)
+    {
+        // animal constructor
+        // fill this in!
+    }
+
+    void print()
+    {
+        // prints the animal to standard output
+        // fill this in!
+    }
+};
+
+class Zoo
+{
+public:
+    vector<Animal> animals;
+    void addAnimal(Animal animal)
+    {
+        // this function adds an animal to the "animals" vector
+        // fill this in!
+        // HINT: use push_back with the "animals" vector
+    }
+
+    void printAnimals()
+    {
+        // this function should print out all of the animals and their properties
+        // fill this in!
+    }
+};
+
+int main()
+{
+    Zoo myZoo;
+
+    // making some animals
+    Animal a1("Jeff", "Lion", 12, "Meat");
+    Animal a2("Anne", "Owl", 3, "Meat");
+    Animal a3("Zain", "Elk", 6, "Plants");
+
+    // Add some animals to the zoo
+    myZoo.addAnimal(a1);
+    myZoo.addAnimal(a2);
+    myZoo.addAnimal(a3);
+
+    // Print out the animals in the zoo
+    myZoo.printAnimals();
+
+    return 0;
+}
+```
+
+#### Your Tasks
+
+- Create the constructor for the `Animal` class
+- Complete the `print()` function in the `Animal` class to print out an animal
+- Complete the `addAnimal()` function in the `Zoo` class to add an animal to the zoo
+- Complete the `printAnimals()` function in the `Zoo` class to print out all of the animals. You should use each animals' `print()` function
+- Add some sub-classes (for example `Mammal`, `Bird`, `Fish`, etc.) that inherit from the `Animal` class and have additional properties. Overload the `print()` function of each subclass to include the additional properties.
