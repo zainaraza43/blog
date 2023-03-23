@@ -2,7 +2,7 @@
 title: Introduction to Classes, Structs, and Objects in C++
 date: 2023-03-21
 draft: false
-author: Jeremie Bornais (With Help From ChatGPT 😎)
+author: Jeremie Bornais (with help from ChatGPT 😎)
 ---
 
 If you're familiar with programming in C++, you've likely heard of classes, structs, and objects. These concepts are at the core of object-oriented programming and are essential for creating efficient, reusable, and modular code.
@@ -216,64 +216,76 @@ Now, let's take a look at the code:
 #include <iostream>
 using namespace std;
 
-class Rectangle {
-  private:
+class Rectangle
+{
+private:
     int width;
     int height;
-  public:
-    Rectangle() {
-      width = 0;
-      height = 0;
+
+public:
+    Rectangle()
+    {
+        width = 0;
+        height = 0;
     }
-    Rectangle(int w, int h) {
-      width = w;
-      height = h;
+    Rectangle(int w, int h)
+    {
+        width = w;
+        height = h;
     }
-    void setWidth(int w) {
-      width = w;
+    void setWidth(int w)
+    {
+        width = w;
     }
-    void setHeight(int h) {
-      height = h;
+    void setHeight(int h)
+    {
+        height = h;
     }
-    int getWidth() {
-      return width;
+    int getWidth()
+    {
+        return width;
     }
-    int getHeight() {
-      return height;
+    int getHeight()
+    {
+        return height;
     }
-    int area() {
-      return width * height;
+    int area()
+    {
+        return width * height;
     }
-    void print() {
-      cout << "Width: " << width << endl;
-      cout << "Height: " << height << endl;
-      cout << "Area: " << area() << endl;
+    void print()
+    {
+        cout << "Width: " << width << endl;
+        cout << "Height: " << height << endl;
+        cout << "Area: " << area() << endl;
     }
 };
 
-struct Point {
-  int x;
-  int y;
+struct Point
+{
+    int x;
+    int y;
 };
 
-int main() {
-  Rectangle r1;
-  Rectangle r2(3, 4);
+int main()
+{
+    Rectangle r1;
+    Rectangle r2(3, 4);
 
-  r1.print();
-  r2.print();
+    r1.print();
+    r2.print();
 
-  r1.setWidth(5);
-  r1.setHeight(6);
+    r1.setWidth(5);
+    r1.setHeight(6);
 
-  cout << "Width of r1: " << r1.getWidth() << endl;
-  cout << "Height of r1: " << r1.getHeight() << endl;
-  cout << "Area of r1: " << r1.area() << endl;
+    cout << "Width of r1: " << r1.getWidth() << endl;
+    cout << "Height of r1: " << r1.getHeight() << endl;
+    cout << "Area of r1: " << r1.area() << endl;
 
-  Point p = {2, 3};
-  cout << "Point p: (" << p.x << ", " << p.y << ")" << endl;
+    Point p = {2, 3};
+    cout << "Point p: (" << p.x << ", " << p.y << ")" << endl;
 
-  return 0;
+    return 0;
 }
 ```
 
@@ -375,4 +387,15 @@ int main()
 - Complete the `print()` function in the `Animal` class to print out an animal
 - Complete the `addAnimal()` function in the `Zoo` class to add an animal to the zoo
 - Complete the `printAnimals()` function in the `Zoo` class to print out all of the animals. You should use each animals' `print()` function
-- Add some sub-classes (for example `Mammal`, `Bird`, `Fish`, etc.) that inherit from the `Animal` class and have additional properties. Overload the `print()` function of each subclass to include the additional properties.
+- Add some sub-classes (for example `Mammal`, `Bird`, `Fish`, etc.) that inherit from the `Animal` class and have additional properties. Overload the `print()` function of each subclass to include the additional properties
+
+#### Extra Challenges
+
+Here are some extra challenges in case you've already learned this and this seems easy for you:
+
+- Make the application interactive by using a loop and user input in the `main` function. Use your creativity here!
+- Add a function `sortAnimals()` to your zoo, which sorts the `animals` vector by an animal's name
+- Modify your `sortAnimals()` function to sort based on different properties (like species)
+- Look into [multiple inheritance](https://www.geeksforgeeks.org/multiple-inheritance-in-c/) and add it into the program. (For example, maybe make a `Flying` subclass of animal and a `Swimming` subclass of animal, and make a third subclass `Duck` which inherits from both `Flying` and `Swimming`)
+- **This one's only for the real prodigies** (even I don't really know how to do this): Use an external library to create a GUI for your application
+- Solve the infamous [P versus NP Problem](https://en.wikipedia.org/wiki/P_versus_NP_problem)
