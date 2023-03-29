@@ -6,6 +6,8 @@ marp: true
 
 By Jeremie Bornais
 
+[jeremie@bornais.ca](mailto:jeremie@bornais.ca) ~ [github.com/jere-mie](https://github.com/jere-mie) ~ [jeremie.bornais.ca](https://jeremie.bornais.ca)
+
 ## Online Article
 
 View the most up-to-date version of this presentation as an article at [https://blog.bornais.ca/posts/2023-03-21-cxx-classes/](https://blog.bornais.ca/posts/2023-03-21-cxx-classes/)
@@ -454,11 +456,11 @@ int main()
 
 #### Extra Challenges
 
-Here are some extra challenges in case you've already learned this and this seems easy for you:
+Here are some extra challenges to take this to the next level:
 
 - Make the application interactive by using a loop and user input in the `main` function. Use your creativity here!
 - Add a function `sortAnimals()` to your zoo, which sorts the `animals` vector by an animal's name
-- Modify your `sortAnimals()` function to sort based on different properties (like species)
+- Modify your `sortAnimals()` function to sort based on different properties
 - Look into [multiple inheritance](https://www.geeksforgeeks.org/multiple-inheritance-in-c/) and add it into the program. (For example, maybe make a `Flying` subclass of animal and a `Swimming` subclass of animal, and make a third subclass `Duck` which inherits from both `Flying` and `Swimming`)
 - **This one's only for the real prodigies** (even I don't really know how to do this): Use an external library to create a GUI for your application
 - Solve the infamous [P versus NP Problem](https://en.wikipedia.org/wiki/P_versus_NP_problem)
@@ -470,3 +472,16 @@ Here are some extra challenges in case you've already learned this and this seem
 I hope you all learned something new today.
 
 As a reminder, you can find the most up to date version of this presentation here: [https://blog.bornais.ca/posts/2023-03-21-cxx-classes/](https://blog.bornais.ca/posts/2023-03-21-cxx-classes/)
+
+## Questions
+
+Please send any questions you may have to my email:
+
+[jeremie@bornais.ca](mailto:jeremie@bornais.ca) ~ [borna113@uwindsor.ca](mailto:borna113@uwindsor.ca)
+
+## Download the Code
+
+```sh
+curl -O https://blog.bornais.ca/cxx-classes/demo.cxx # demo file
+curl -O https://blog.bornais.ca/cxx-classes/exercise.cxx # exercise file
+```
