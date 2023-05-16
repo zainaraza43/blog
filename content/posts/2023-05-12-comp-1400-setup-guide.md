@@ -1,7 +1,7 @@
 ---
 title: COMP-1400 Dev Environment Setup Guide
 date: 2023-05-12
-draft: true
+draft: false
 author: Jeremie Bornais (with help from ChatGPT 😎)
 ---
 
@@ -11,12 +11,13 @@ Setting up a development environment on Windows for coding in C can seem dauntin
 
 WSL (Windows Subsystem for Linux) is a compatibility layer that allows running Linux binaries natively on Windows. It provides an easy way to get a full Linux environment running on Windows, including a terminal and package manager.
 
-To install WSL, follow these steps:
+To install WSL, follow the steps on the official [Microsoft docs](https://learn.microsoft.com/en-us/windows/wsl/install). Essentially, though, you should only need to run one command in an **admin Powershell window**:
 
-1. Open the Microsoft Store app on your Windows machine.
-1. Search for "WSL" in the search bar and select "Ubuntu" from the list of available options.
-1. Click on the "Get" button to start the installation process.
-1. Once the installation is complete, launch Ubuntu from the Start menu to start using WSL.
+```sh
+wsl --install
+```
+
+This command should install WSL and Ubuntu. You'll most likely need to reboot your PC, then when Ubuntu is run for the first time, you'll get to create a username and password for Ubuntu. Then, WSL will be installed! Make sure to consult the official [Microsoft documentation](https://learn.microsoft.com/en-us/windows/wsl/install) when installing WSL as sometimes things change.
 
 ## Step 2: Install GCC
 
@@ -25,8 +26,8 @@ GCC (GNU Compiler Collection) is a collection of programming language compilers,
 To install GCC on Ubuntu, follow these steps:
 
 1. Open a terminal window in Ubuntu by typing "ubuntu" in the Start menu search bar and selecting "Ubuntu" from the list of results.
-1. Run the following command to update the package list: sudo apt-get update
-1. Run the following command to install GCC: sudo apt-get install build-essential
+1. Run the following command to update the package list: `sudo apt-get update`
+1. Run the following command to install GCC: `sudo apt-get install gcc build-essential`
 
 ## Step 3: Install VSCode
 
