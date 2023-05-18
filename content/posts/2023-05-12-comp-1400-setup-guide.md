@@ -44,15 +44,25 @@ To install VSCode on Windows, follow these steps:
 Once you have installed VSCode, you need to configure it to work with WSL and GCC. Follow these steps to set up the necessary configurations:
 
 1. Open VSCode on Windows.
-1. Install the "Remote - WSL" extension by clicking on the "Extensions" icon in the left-hand toolbar and searching for "Remote - WSL."
-1. Click on the "Remote Explorer" icon in the left-hand toolbar.
-1. Click on the "Connect to a Remote Host" button and select "Remote-WSL: New Window" from the dropdown menu.
-1. In the new VSCode window that opens, click on the "Terminal" tab and select "New Terminal" from the dropdown menu.
-1. In the terminal, run the following command to test that GCC is installed and working correctly: gcc --version
-1. Create a new C file in VSCode by clicking on the "File" menu and selecting "New File." Save the file with a .c extension.
-1. Write your C code in the new file and save it.
-1. Compile your code by opening a terminal in VSCode and running the following command: gcc filename.c -o filename
-1. Run your program by opening a terminal in VSCode and running the following command: ./filename
+1. Install the "Remote Development" extension pack by clicking on the "Extensions" icon in the left-hand toolbar and searching for "Remote Development"
+
+## Step 5: Opening VSCode Within WSL
+
+Now that VSCode is installed and configured, let's create a folder to store all of our C files and open it in VSCode in WSL. **You can create a folder anywhere you like. However, for the purposes of this tutorial, I'm going to assume the folder is `C:\code\`**
+
+1. Launch the WSL terminal: Open the WSL terminal by searching for "WSL" or the specific Linux distribution you have installed (in your case, probably **Ubuntu**) in the Windows Start menu. This will open a Linux shell within the Windows environment.
+1. Navigate to the desired folder: Use the cd command to navigate to the folder on your C drive that you want to open in VSCode. For example, if your folder is located at `C:\code`, you can use the following command to navigate to it: `cd /mnt/c/code`
+1. Create an empty C file: Use the `touch` command to create a "hello.c" file: `touch hello.c`
+1. Launch VSCode from the WSL terminal: In the WSL terminal, you can launch VSCode and specify the current directory to open. Use the `code .` command to open the current directory in VSCode. The dot (.) represents the current directory.
+1. Now, VSCode should be open and you can see `hello.c` on the left. You can now click on the file to edit it. (You can find a sample "hello world" program at the bottom of this article)
+
+## Step 6: Compiling and Running your C Files
+
+Editing files is fun and all, but our real objective is to compile and run them. Luckily, this is a simple process and only requires 3 commands.
+
+1. First, you'll need to open up a terminal within VSCode. This can be done by clicking `Terminal` under the `View` menu of VSCode.
+1. You should now see a terminal open at the bottom of your screen. At this point, you can compile the C file by typing the command `gcc hello.c -o hello.exe`
+1. You should see a `hello.exe` file appear on the left side of VSCode. You can run it by typing `./hello.exe` in the terminal. You should see the text "Hello World!" printed in the terminal.
 
 Congratulations! You have now set up a development environment on Windows for coding in C. You can use this environment to write, compile, and run C programs.
 
