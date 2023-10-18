@@ -9,7 +9,7 @@ One of the most difficult steps of web development for beginners is the final st
 
 As you continue in your web development journey, you'll most likely find a solution that fits and scales to your specific needs. However, most of us aren't building web applications that need to scale to thousands of concurrent users, and just need a way to get some hobby projects online.
 
-This tutorial will guide you through the process of setting up your own Virtual Private Server (VPS). This is a (virtual) Linux machine that you'll have full control over, and can use to host as many projects/websites as it can handle. From Discord bots to full stack web applications to public APIs to mail servers, you can pretty much put whatever you want on this server. This is the beauty of using a VPS to host your applications - you're given a machine and you can put whatever you want on it. The best part is this server is offered by GCP for free forever. There are no trials that end after 12 months - you simply sign up and get access to a free VPS, no strings attached. 
+This tutorial will guide you through the process of setting up your own Virtual Private Server (VPS). This is a (virtual) Linux machine that you'll have full control over and can use to host as many projects/websites as it can handle. From Discord bots to full stack web applications to public APIs to mail servers, you can pretty much put whatever you want on this server. This is the beauty of using a VPS to host your applications - you're given a machine and you can put whatever you want on it. The best part is this server is offered by GCP for free forever. There are no trials that end after 12 months - you simply sign up and get access to a free VPS, no strings attached. 
 
 GCP offers a variety of other products for free, which I recommend you check out here: [cloud.google.com/free](https://cloud.google.com/free)
 
@@ -20,7 +20,7 @@ GCP offers a variety of other products for free, which I recommend you check out
 - Enable billing and input your credit/debit card or other billing details
 - Enable Compute Engine
 
-**NOTE**: Although your credit/debit card is required, your VPS will still remain free forever.
+**NOTE**: Although your credit/debit card is required, your VPS will remain free forever.
 
 ## Creating Your First VPS
 
@@ -54,11 +54,11 @@ Make sure to take note of this IP address for when you connect it to your domain
 
 ## Connecting Your Domain to Your VPS
 
-- Login to your domain provider (for example, namecheap), and go to your DNS settings page
+- Login to your domain provider (for example, Namecheap), and go to your DNS settings page
 - Create a new A record for your domain:
   - Under `host` you may need to leave it blank or put `@` depending on your domain provider
-    - This connects the `apex` domain to your VPS (for example, website.com).
-    - If you prefer a subdomain, such as `www`, put that here instead (for example, www.website.com)
+    - This connects the `apex` domain to your VPS (for example, example.com).
+    - If you prefer a subdomain, such as `www`, put that here instead (for example, www.example.com)
     - If you want both your apex domain and `www`, create two `A` records
   - Under `value` put the IP address from the above step
 
@@ -74,11 +74,11 @@ sudo apt install python3 python3-pip build-essential git htop vim screen dnsutil
 curl -fLo ~/.vimrc https://raw.githubusercontent.com/jere-mie/dotfiles/main/minimal.vim
 ```
 
-**NOTE:** People with some experience with Linux and Debian-based systems may be tempted to run `sudo apt upgrade` here. While I do recommend doing this at some point, I'd recommend waiting until you're done the rest of this setup process. This is because `google-cloud-sdk`, one of the packages installed on GCP VMs, takes a notoriously long time to update. Thus, wait to run this until you're at a point where you don't mind letting your VPS idle for potentially up to an hour.
+**NOTE:** People with some experience with Linux and Debian-based systems may be tempted to run `sudo apt upgrade` here. While I do recommend doing this at some point, I'd recommend waiting until you're done with the rest of this setup process. This is because `google-cloud-sdk`, one of the packages installed on GCP VMs, takes a notoriously long time to update. Thus, wait to run this until you're at a point where you don't mind letting your VPS idle for potentially up to an hour.
 
 ### Installing Caddy
 
-Caddy is the reverse proxy we'll use to connect your domain to your website. You can find the most up to date install instructions here: [https://caddyserver.com/docs/install](https://caddyserver.com/docs/install#debian-ubuntu-raspbian), or run the commands below, which are updated as of 2023/10/18:
+Caddy is the reverse proxy we'll use to connect your domain to your website. You can find the most up-to-date install instructions here: [https://caddyserver.com/docs/install](https://caddyserver.com/docs/install#debian-ubuntu-raspbian), or run the commands below, which are updated as of 2023/10/18:
 
 ```bash
 sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
@@ -90,7 +90,7 @@ sudo apt install caddy
 
 ## Configuring Caddy
 
-Caddy is what we'll be using as a reverse proxy. Essentially what that means is it will take requests to your domain (for example, when someone goes to www.website.com), and passes that to the actual process you have that is running your website (for exmaple, a NextJS application or a Flask server).
+Caddy is what we'll be using as a reverse proxy. Essentially what that means is it will take requests to your domain (for example, when someone goes to www.example.com), and pass them to the actual process that is running your website (for example, a NextJS application or a Flask server).
 
 We configure caddy using a file called `Caddyfile` (no file extension). Use the following commands to create a Caddyfile and start caddy.
 
@@ -105,16 +105,16 @@ sudo caddy stop
 sudo caddy start
 ```
 
-Here is a sample Caddyfile for connecting the domain `website.com` and `www.website.com` to a web application running on port 8080.
+Here is a sample Caddyfile for connecting the domain `example.com` and `www.example.com` to a web application running on port 8080.
 
 
 ```
-www.website.com website.com {
+www.example.com example.com {
     reverse_proxy localhost:8080
 }
 ```
 
-**NOTE:** Make sure to change the domain from `website.com` to your actual domain in your Caddyfile.
+**NOTE:** Make sure to change the domain from `example.com` to your actual domain in your Caddyfile.
 
 ### Updating the Caddyfile
 
@@ -132,7 +132,7 @@ sudo caddy start
 
 ## Setting up a Sample Site
 
-If you already have a specific web application you'd like to host, you can use that here instead. However, to just get something running, here is a simple Python webserver that just runs a "Hello World" website on port 8080. Save the following to a file, say, `website.py`:
+If you already have a specific web application you'd like to host, you can use that here instead. However, to just get something running, here is a simple Python web server that just runs a "Hello World" website on port 8080. Save the following to a file, say, `website.py`:
 
 ```py
 import http.server
@@ -158,7 +158,7 @@ You can now run the application with the command:
 python3 app.py &
 ```
 
-Notice that we use `&`. This runs the application in the background. You'll need to be careful with running applications in the background like this, because it can be difficult to find and stop them later if you're not familiar with Linux.
+Notice that we use `&`. This runs the application in the background. You'll need to be careful with running applications in the background like this because it can be difficult to find and stop them later if you're not familiar with Linux.
 
 To terminate the process running on port 8080 (our sample website), we can use the following command:
 
