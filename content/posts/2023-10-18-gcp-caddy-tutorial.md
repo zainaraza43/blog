@@ -155,7 +155,7 @@ httpd.serve_forever()
 You can now run the application with the command:
 
 ```bash
-python3 app.py &
+python3 website.py &
 ```
 
 Notice that we use `&`. This runs the application in the background. You'll need to be careful with running applications in the background like this because it can be difficult to find and stop them later if you're not familiar with Linux.
