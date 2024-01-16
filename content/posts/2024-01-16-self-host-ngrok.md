@@ -61,6 +61,11 @@ To terminate the tunnel later, find the process ID and use the `kill` command:
 pgrep -f "ssh -f -N -R 8080:localhost:8000 user@remote-server"
 kill <process_id>
 ```
+## Coupling This With Caddy and a Custom Domain
+
+Since your local process is now accessible on your remote server on a specific port, you can treat it like any other service running on your remote server. Thus, you can use something like Caddy and a custom domain to make it appear like any other website.
+
+Check out my tutorial on hosting web applications using GCP and Caddy [here](https://blog.bornais.ca/posts/2023-10-18-gcp-caddy-tutorial/).
 
 ## Conclusion
 
