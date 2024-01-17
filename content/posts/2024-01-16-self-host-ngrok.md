@@ -1,5 +1,5 @@
 ---
-title: Self-Hosting Your Own ngrok with Reverse SSH Tunneling
+title: Self-Hosting Your Own ngrok Alternative with Reverse SSH Tunneling
 date: 2024-01-16
 draft: false
 author: Jeremie Bornais (with help from ChatGPT 😎)
@@ -55,12 +55,27 @@ If you want to keep the tunnel running in the background, use the following comm
 ssh -f -N -R 8080:localhost:8000 user@remote-server
 ```
 
+### Terminating the Tunnel
+
 To terminate the tunnel later, find the process ID and use the `kill` command:
 
 ```bash
 pgrep -f "ssh -f -N -R 8080:localhost:8000 user@remote-server"
 kill <process_id>
 ```
+
+If you're a Windows user, you won't have pgrep installed, so you can use the following command in Powershell to get the process ID of the tunnel:
+
+```sh
+Get-Process | Where-Object { $_.ProcessName -match 'ssh' }
+```
+
+And then use the following command to stop the tunnel (replacing <PID> with the ID obtained from the previous step):
+
+```sh
+Stop-Process -Id <PID>
+```
+
 ## Coupling This With Caddy and a Custom Domain
 
 Since your local process is now accessible on your remote server on a specific port, you can treat it like any other service running on your remote server. Thus, you can use something like Caddy and a custom domain to make it appear like any other website.
