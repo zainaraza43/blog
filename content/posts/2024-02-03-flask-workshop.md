@@ -31,14 +31,14 @@ Sample code available at [github.com/jere-mie/flask-workshop/](https://github.co
 
 What it is and why you should use it
 
-## What is Flask?
+### What is Flask?
 
 - A micro web framework written in Python
 - Used for coding the back end of websites
 - Very light by design
 - Has many additional addons that can be used in addition to it (WTForms, SQLAlchemy, Flask-Login. etc.)
 
-## Why use it?
+### Why use it?
 
 - Very simple to get started
 - Many great addons
@@ -49,7 +49,7 @@ What it is and why you should use it
 ## **Installation**
 Just a "pip install" away!
 
-## "pip install flask"
+### "pip install flask"
 
 - **Python 3.5+** is required to install Flask
 - Pip must also be installed to be able to install it
@@ -62,7 +62,7 @@ Just a "pip install" away!
 ## **Your First App**
 Boilerplate code to get you started
 
-## The Bare Minimum
+### The Bare Minimum
 
 ```py
 from flask import Flask
@@ -80,7 +80,7 @@ if __name__ == "__main__":
 2. Run `python app.py` (You may need to run `python3 app.py` instead)
 3. Go to [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 
-## Common structure of a Flask app
+### Common structure of a Flask app
 
 - app.py
 - config.json
@@ -96,18 +96,18 @@ if __name__ == "__main__":
 ## **Routes and Templates**
 Add pages, use real HTML files
 
-## Common Functions
+### Common Functions
 
-### render_template()
+#### render_template()
 Used to render an HTML template file in the "templates" folder
 
-### url_for()
+#### url_for()
 Used to find the URL of a particular route, often used for links and specifying file sources (ex. css files)
 
 #### redirect()
 Used to redirect the user to a different URL or route. Often used with `url_for()` to redirect to different routes on the website
 
-## Your Own Routes
+### Your Own Routes
 
 ```py
 @app.route('/about')
@@ -119,7 +119,7 @@ def contact():
     return render_template('contact.html')
 ```
 
-## Passing Data to Routes
+### Passing Data to Routes
 
 ```py
 @app.route('/posts/<post_id>')
@@ -134,7 +134,7 @@ def posts(post_id):
 <a href="{{ url_for('posts', post_id=4) }}">View Post</a>
 ```
 
-## Templates & Inheritance
+### Templates & Inheritance
 
 In layout.html:
 
@@ -159,7 +159,7 @@ In home.html:
 {% endblock %}
 ```
 
-## More on Templates
+### More on Templates
 
 Using a for loop:
 
@@ -182,7 +182,7 @@ Using an if statement:
 ## **Next Steps**
 Extending your app's functionality
 
-## Common packages used with Flask
+### Common packages used with Flask
 
 - Flask-SQLAlchemy
   - Simple extension that allows you to connect to a variety of SQL databases
@@ -194,16 +194,3 @@ Extending your app's functionality
   - Makes handling user file uploads simple and secure.
 - bcrypt
   - Used for hashing and checking passwords, makes authentication more secure.
-
-## **Interactive Demo**
-Let's make something!
-
-## **Questions?**
-Ask away!
-
-## **THANK YOU FOR JOINING!**
-
-I hope you learned something new 😀
-
-Remember, the source code and these slides can be found here:
-[github.com/jere-mie/flask-workshop](https://github.com/jere-mie/flask-workshop)
