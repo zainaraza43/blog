@@ -1,5 +1,5 @@
 ---
-title: Build Your First Full-Stack App With FLask
+title: Build Your First Full-Stack App With Flask
 date: 2024-02-03
 draft: false
 author: Jeremie Bornais
