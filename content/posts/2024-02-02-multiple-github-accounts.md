@@ -52,13 +52,13 @@ Create the file `~/.ssh/config` and put the following in it:
 # github <account1>
 Host <account1>.github.com
 HostName github.com
-PreferredAuthentication publickey
+PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_<account1>
 
 # github <account2>
 Host <account2>.github.com
 HostName github.com
-PreferredAuthentication publickey
+PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_<account2>
 ```
 
