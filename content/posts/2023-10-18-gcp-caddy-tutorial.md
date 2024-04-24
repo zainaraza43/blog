@@ -13,6 +13,11 @@ This tutorial will guide you through the process of setting up your own Virtual 
 
 GCP offers a variety of other products for free, which I recommend you check out here: [cloud.google.com/free](https://cloud.google.com/free)
 
+## YouTube Tutorial
+
+*I created a video where I go over the steps outlined in this article. Feel free to watch it [here](https://www.youtube.com/watch?v=vPE-qNj6TcY).*
+
+
 ## Signing up for and Configuring GCP
 
 - Head to the Google Cloud Platform Console [(console.cloud.google.com)](https://console.cloud.google.com/) and sign in with your Google account.
