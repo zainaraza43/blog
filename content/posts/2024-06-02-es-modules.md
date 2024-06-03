@@ -2,7 +2,7 @@
 title: Crash Course on ES Modules
 date: 2024-06-02
 draft: false
-author: ChatGPT 4o
+author: ChatGPT 4o 🤖
 --- 
 
 JavaScript, traditionally known for its simplicity in web development, has evolved significantly. One of the most impactful enhancements is the introduction of ES Modules (ECMAScript Modules). ES Modules bring a standardized module system to JavaScript, making it easier to manage and organize code. This crash course will dive into what ES Modules are, how to use them, and why they are beneficial.
