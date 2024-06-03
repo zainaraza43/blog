@@ -19,7 +19,20 @@ ES Modules are a standardized way to encapsulate and share code in JavaScript. T
 
 ## How to Use ES Modules
 
-Using ES Modules involves the `import` and `export` statements.
+Using ES Modules involves the `import` and `export` statements. Additionally, to use ES Modules within an HTML file, you need to specify the `type="module"` attribute in the script tag.
+
+### Full Project Structure
+
+Here's an example of a simple project structure using ES Modules:
+
+```
+/my-esm-project
+  /src
+    calculator.js
+    main.js
+    math.js
+  index.html
+```
 
 ### Exporting from a Module
 
@@ -30,7 +43,7 @@ To make parts of a module available to other modules, you use the `export` state
 You can export multiple values from a module using named exports.
 
 ```javascript
-// math.js
+// src/math.js
 export const pi = 3.14159;
 export function add(x, y) {
   return x + y;
@@ -42,7 +55,7 @@ export function add(x, y) {
 A module can have a single default export, which can be a function, class, object, etc.
 
 ```javascript
-// calculator.js
+// src/calculator.js
 export default class Calculator {
   constructor() {
     // constructor logic
@@ -63,7 +76,7 @@ To use the exported values in another module, you use the `import` statement.
 You need to use the exact names of the exported values.
 
 ```javascript
-// main.js
+// src/main.js
 import { pi, add } from './math.js';
 
 console.log(`The value of pi is ${pi}`);
@@ -75,7 +88,7 @@ console.log(`2 + 3 = ${add(2, 3)}`);
 You can give the imported value any name.
 
 ```javascript
-// app.js
+// src/main.js
 import Calculator from './calculator.js';
 
 const calc = new Calculator();
@@ -87,7 +100,7 @@ console.log(`5 + 7 = ${calc.add(5, 7)}`);
 You can import all named exports as an object.
 
 ```javascript
-// main.js
+// src/main.js
 import * as MathUtils from './math.js';
 
 console.log(`The value of pi is ${MathUtils.pi}`);
@@ -99,12 +112,30 @@ console.log(`2 + 3 = ${MathUtils.add(2, 3)}`);
 Dynamic imports allow you to load modules conditionally or on demand, returning a promise.
 
 ```javascript
-// dynamic-import.js
+// src/main.js
 if (condition) {
   import('./module.js').then((module) => {
     module.doSomething();
   });
 }
+```
+
+### Using ES Modules in HTML
+
+To use ES Modules within an HTML file, include the `type="module"` attribute in the script tag. Here's how you can set up your HTML file:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES Modules Example</title>
+</head>
+<body>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
 ```
 
 ## Why Use ES Modules?
