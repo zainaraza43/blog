@@ -2,7 +2,7 @@
 title: Using GNU Screen - A Powerful Terminal Multiplexer
 date: 2024-02-07
 draft: false
-author: ChatGPT 3.5
+author: ChatGPT 3.5 🤖
 --- 
 
 GNU Screen is a versatile tool that enhances productivity for users who spend a lot of time working in the terminal. In this guide, we'll explore what GNU Screen is, its common use cases, reasons why you should use it, how to detach and reattach sessions, and some common options you can specify to tailor your experience.
