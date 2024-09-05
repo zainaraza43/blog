@@ -4,8 +4,6 @@ url: "/about"
 description: "A little about me and this site"
 ---
 
-Hi, I'm Jeremie! I'm an experienced software engineer and computer science graduate from the University of Windsor. I've worked for a variety of industries in a variety of roles (insurance & financial services, compliance, education, scientific research). I'm very passionate about computer science and coding in general.
+Hi, I'm Zain! I'm a Canadian software engineer. I've worked with a variety of industries in a variety of roles (drone, hr software, compliance, education, scientific research). I'm very passionate about Software Engineering and specifically Android software.
 
-Want to learn more about me? Check out my main site [here](https://jeremie.bornais.ca/)
-
-I'm always happy to [connect on LinkedIn](https://linkedin.com/in/jeremie-bornais) or you can send me an email at [jeremie@bornais.ca](mailto:jeremie@bornais.ca)
+I'm always happy to [connect on LinkedIn](https://www.linkedin.com/in/zainr/) or you can send me an email at [razazain2002@gmail.com](mailto:razazain2002@gmail.com)

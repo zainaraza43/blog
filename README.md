@@ -1,3 +1,3 @@
-# Jeremie's Blog
+# Zain's Blog
 
-This repository contains the code for my personal blog. I'm using Hugo (specifically the PaperMod theme) to build the site!
+This repository contains the code for my personal blog. Terrible takes are originally mine.

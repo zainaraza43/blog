@@ -1,6 +1,6 @@
-baseURL: https://blog.bornais.ca
+baseURL: https://zainraza.net 
 languageCode: en-us
-title: Jeremie's Blog
+title: Zain's Blog
 theme: "PaperMod"
 paginate: 15
 
@@ -11,10 +11,10 @@ buildExpired: false
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: Jeremie's Blog
-  description: Welcome to my blog! Here, I'll write about things I find interesting, or give tutorials that hopefully someone will find useful :)
+  title: Zain's Blog
+  description: Welcome to my blog. Here I use zoomer lang to describe my experiences in tech. Terrible takes are originally mine. 
   keywords: [Blog, Computer Science]
-  author: Jeremie Bornais
+  author: Zain Raza
   # author: ["Me", "You"] # multiple authors
   # images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
@@ -42,15 +42,15 @@ params:
   tocopen: false
 
   label:
-    text: "Jeremie's Blog"
+    text: "Zain's Blog"
     # icon: /apple-touch-icon.png
     iconHeight: 35
 
   # profile-mode
   profileMode:
     enabled: false # needs to be explicitly set
-    title: Jeremie's Blog
-    subtitle: "Come learn with me :)"
+    title: Zain's Blog
+    subtitle: "realest blog known to man"
     # imageUrl: "<img location>"
     # imageWidth: 120
     # imageHeight: 120
@@ -64,16 +64,13 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog! Here, I'll write about things I find interesting, or give tutorials that hopefully someone will find useful :)
+    Content: Welcome to my blog. Here I use zoomer lang to describe my experiences in tech. Terrible takes are originally mine.
 
   socialIcons:
     - name: github
-      url: "https://github.com/jere-mie/"
+      url: "https://github.com/zainaraza43"
     - name: linkedin
-      url: "https://www.linkedin.com/in/jeremie-bornais/"
-    - name: website
-      url: "https://jeremie.bornais.ca"
-
+      url: "https://www.linkedin.com/in/Zain-bornais/"
 outputs:
     home:
         - HTML
