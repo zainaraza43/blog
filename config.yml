@@ -70,7 +70,7 @@ params:
     - name: github
       url: "https://github.com/zainaraza43"
     - name: linkedin
-      url: "https://www.linkedin.com/in/Zain-bornais/"
+      url: "https://www.linkedin.com/in/zainr/"
 outputs:
     home:
         - HTML
