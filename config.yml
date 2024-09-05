@@ -12,7 +12,7 @@ buildExpired: false
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Zain's Blog
-  description: Welcome to my blog. Here I use zoomer lang to describe my experiences in tech. Terrible takes are originally mine. 
+  description: Welcome to my blog. Here I use zoomer lang to describe my experiences in tech. Terrible takes are authentically mine. 
   keywords: [Blog, Computer Science]
   author: Zain Raza
   # author: ["Me", "You"] # multiple authors
@@ -64,7 +64,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog. Here I use zoomer lang to describe my experiences in tech. Terrible takes are originally mine.
+    Content: Welcome to my blog. Here I use zoomer lang to describe my experiences in tech. Terrible takes are authentically mine.
 
   socialIcons:
     - name: github
