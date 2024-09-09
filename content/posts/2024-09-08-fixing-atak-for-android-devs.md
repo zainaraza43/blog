@@ -104,7 +104,7 @@ class SomeRepositoryImp (
 
 ### databases
 
-i typically use `Room` which requires `ksp`, which can be kinda annoying to import into your ATAK project, specifically because it depends on your kotlin version. since i'm currently writing this on atak 5.1.0, i'm using kotlin `1.9.25` so i scroll on the [release list](https://github.com/google/ksp/releases?page=1) of ksp that supports my kotlin version. That ends up being 2.6.1 that looks like this in my app level dependencies block:
+i typically use `Room` which requires `ksp`, which can be kinda annoying to import into your ATAK project, specifically because it depends on your kotlin version. since i'm currently writing this on atak 5.1.0, i'm using kotlin `1.9.25` so i scroll on the [release list](https://github.com/google/ksp/releases?page=1) of ksp that supports my kotlin version. that ends up being 2.6.1 in my case, that looks like this in my app level dependencies block:
 
 ```gradle
 dependencies {
