@@ -1,7 +1,7 @@
 ---
 title: Feeling Bored? Go to a Hackathon
 date: 2024-10-12
-draft: true
+draft: false
 ---
 
 bogged down by your day job? feeling like the more you work, the less fun coding gets? perhaps you're a student and you're overwhelmed by learning how to code realistic applications? maybe your weekends are simply uneventful. one possible solution is attending and competing at a hackathon. recently myself and some of my friends (who are also co-workers) on a whim competed at a hackathon called [NASA Space Apps](https://www.spaceappschallenge.org/) where 6 of us made a semi decent full stack web app where we would track NASA satellites and displayed what they saw in human readable formats, throughout those 48 hours we all collectively came to learn a couple of things about going to hackathons that i'd like to share.
