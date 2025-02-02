@@ -14,13 +14,13 @@ even if you don't manage to build anything, there is still a weekend of hanging 
 
 especially for intermediate+ level developers/engineers, it solves the question that percolates everyone's head at some point or another: "if me and my friends got together to build something, how far and how fast could we go?" and i'll tell you that you'd be really shocked at what you and your friends could accomplish. i'll tell you now that our entire team was absolutely **NOT** losing sleep over the hackathon, in the absolute best case we'd show up at 9am and leave around 6-7pm, work a slight amount from home and sleep a full 8 hours or more, this is not bringing up the numerous times we all took breaks to shoot the shit and arrive hours late. in fact, two of our group members went to two SEPARATE weddings in the middle of the hackathon. so, in short, you don't need to go absolutely balls to the wall to have fun and make a semi-competitive project.
 
-## you gain a fresh prespective
+## you gain a fresh perspective
 
 when you're in a hackathon, you're typically doing challenges in certain categories, if you haven't already asked other groups how they're solving similar problems, you really should! most groups love sharing what they're working on and how, regardless of the whole competition aspect. worst case, you can take a look at other teams' repos to see how they handled similar challenges as you. also, you get to measure what you did well and what you misprioritized.
 
 ## tldr
 
-if you're bored with your weekends or at work, sign up for a hackathon that is preferrably in person, or sign up for your company's internal hackathon, you get free food, talk to interesting people, shoot the shit with your friends, and mess with some technology that you've been meaning to or are completely inexperienced in. so go ask your friends/co-workers, even if you don't submit it's definitely worth a weekend.
+if you're bored with your weekends or at work, sign up for a hackathon that is preferably in person, or sign up for your company's internal hackathon, you get free food, talk to interesting people, shoot the shit with your friends, and mess with some technology that you've been meaning to or are completely inexperienced in. so go ask your friends/co-workers, even if you don't submit it's definitely worth a weekend.
 
 ## project details
 
