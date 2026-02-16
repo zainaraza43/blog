@@ -8,13 +8,13 @@ HI, it's been a second since i posted. but recently the powers that be have give
 
 ## the problem
 
-as we all know, ATAK plugins have issues accessing the standard android app lifecycle, this makes making implementation of standard android classes pretty difficult, so implementing a `ViewModel()` just doesn't work. So we can kiss goodbye to things that a normal android view model could technically do, things like the `viewModelScope`, automatic lifecycle-aware coroutine cancellation, configuration-change resillience, blah blah blah you get the point. this makes it so that we need to do more manual work in atak plugins.
+as we all know, ATAK plugins have issues accessing the standard android app lifecycle, this makes making the implementation of standard android classes pretty difficult, so implementing a `ViewModel()` just doesn't work. So we can kiss goodbye to things that a normal android view model could technically do, things like the `viewModelScope`, automatic lifecycle-aware coroutine cancellation, configuration-change resillience, blah blah blah you get the point. this makes it so that we need to do more manual work in atak plugins.
 
 this problem becomes a really big headache when we need external libraries in our ATAK plugins since a lot of standard android depdendencies need `Context`, for more info check out [my previous post on context in ATAK](https://zainraza.net/posts/2024-09-08-fixing-atak-for-android-devs/#what-the-context). something that can be a difficult thing to get working depending on the library, and this extends to all the standard DI libraries: Dagger/Hilt and Koin-Android are basically impossible to setup as of right now in ATAK. BUT i had a stupid but simple realization: _what if we just used koin-core instead of koin-android?_
 
 ## how this would solve it
 
-koin-core is meant for standard kotlin applications, not android apps, so if we retrofit (haha get it) it for "android" use, so there is no need for `Context`, this logic also applies to any library that offers a core version instead of an android version, even though some libraries will definitely work is you pass in the `appContext` and not the `pluginContext`.
+koin-core is meant for standard kotlin applications, not android apps, so if we retrofit (haha get it) it for "android" use, there would be no need for `Context`, this logic also applies to any library that offers a core version instead of an android version, even though some libraries will definitely work if you pass in the `appContext` and not the `pluginContext`.
 
 ## setup tutorial
 
@@ -137,7 +137,7 @@ and now we can instantiate our view model like this in every class other than `P
 private val userViewModel = KoinPlatform.getKoin().get<UserViewModel>()
 ```
 
-but since i'm doing this in the `PluginTemplate` class i'm going to need to use the `lateinit var` variation, since insantiating the variable before the `init { }` block is run will break our plugin in runtime.
+but since i'm doing this in the `PluginTemplate` class i'm going to need to use the `lateinit var` variation, since insantiating the variable before the `init { }` block will break our plugin in runtime.
 
 ```kotlin
 private lateinit var userViewModel: UserViewModel
